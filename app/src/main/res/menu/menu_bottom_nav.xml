@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_first_fragment"
+        android:icon="@drawable/menu_first_fragment_icon"
+        android:orderInCategory="101"
+        android:title="@string/first_fragment"
+        app:showAsAction="ifRoom|withText"
+        android:iconTint="@color/colorAccent"/>
+
+    <item
+        android:id="@+id/action_second_fragment"
+        android:icon="@drawable/menu_second_fragment_icon"
+        android:orderInCategory="102"
+        android:title="@string/second_fragment"
+        app:showAsAction="ifRoom|withText"
+        android:iconTint="@color/colorAccent"/>
+
+
+    <item
+        android:id="@+id/action_third_fragment"
+        android:icon="@drawable/menu_third_fragment_icon"
+        android:orderInCategory="103"
+        android:title="@string/third_fragment"
+        app:showAsAction="ifRoom|withText"
+        android:iconTint="@color/colorAccent"/>
+
+</menu>

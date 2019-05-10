@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorLightPrimary">#D7CCC8</color>
+    <color name="colorPrimaryDark">#5D4037</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorLightAccent">#FF8A65</color>
+
+    <color name="colorPrimaryText">#424242</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="dividerColor">#BDBDBD</color>
+
+    <color name="colorBlueGray">#607D8B</color>
+    <color name="colorDarkBlueGray">#455A64</color>
+</resources>

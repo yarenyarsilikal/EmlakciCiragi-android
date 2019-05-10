@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Emlakçı Çırağı</string>
+
+    <!-- Settings -->
+    <string name="title_settings">Settings</string>
+
+    <!-- Bottom Navigation -->
+    <string name="first_fragment">First Fragment</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="third_fragment">Third Fragment</string>
+
+    <string name="value">Value</string>
+    <string name="enter_value">Please enter a value</string>
+
+</resources>
