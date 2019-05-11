@@ -11,6 +11,7 @@
         android:id="@+id/il_rent_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
         android:hint="@string/enter_rent_value"
         android:textColorHint="@color/colorLightPrimary"
         app:boxBackgroundColor="@color/colorPrimaryDark"
@@ -19,35 +20,36 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_sale_value"
+            android:id="@+id/et_rent_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:cursorVisible="false"
             android:inputType="number"
             android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_rent_calculate"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin_30"
         android:layout_marginTop="@dimen/default_margin_15"
         android:background="@color/colorLightAccent"
         android:text="@string/calculate"
         android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@id/btn_rent_delete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/il_rent_value" />
 
     <Button
         android:id="@+id/btn_rent_delete"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin_15"
-        android:layout_marginEnd="@dimen/default_margin_30"
         android:background="@color/colorLightAccent"
         android:text="@string/delete"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_rent_calculate"
         app:layout_constraintTop_toBottomOf="@id/il_rent_value" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -69,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@id/gl">
 
         <TextView
-            android:id="@+id/tv_without_KDV"
+            android:id="@+id/tv_rent_without_KDV"
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
@@ -78,16 +80,14 @@
             android:gravity="center"
             android:text="@string/label_without_KDV"
             android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintEnd_toStartOf="@id/tv_include_KDV"
+            app:layout_constraintEnd_toStartOf="@id/tv_rent_include_KDV"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_include_KDV"
+            android:id="@+id/tv_rent_include_KDV"
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
-            android:layout_marginBottom="@dimen/default_margin_5"
             android:gravity="center"
             android:text="@string/label_include_KDV"
             android:textColor="@color/colorPrimaryDark"
@@ -116,27 +116,26 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_cp_without_KDV"
+            android:id="@+id/tv_renter_without_KDV"
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintEnd_toStartOf="@id/tv_cp_include_KDV"
+            app:layout_constraintEnd_toStartOf="@id/tv_renter_include_KDV"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_cp_include_KDV"
+            android:id="@+id/tv_renter_include_KDV"
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

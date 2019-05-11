@@ -33,6 +33,7 @@
     <string name="enter_rate_of_interest">Lütfen faiz oranını giriniz...</string>
     <string name="label_installment_amount">Aylık Taksit Tutarı</string>
     <string name="label_total_credit_payment">Toplam Ödeme</string>
+    <string name="message_fill_all_fields">Lütfen tüm alanları doldurunuz!</string>
 
 
     <!-- COMMON -->
