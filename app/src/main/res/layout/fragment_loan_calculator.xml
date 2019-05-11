@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/default_margin_15"
+    tools:context=".UI.Fragment.LoanCalculatorFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_installment_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_installment_number"
+        android:textColorHint="@color/colorLightPrimary"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_installment_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_credit_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_credit_amount"
+        android:textColorHint="@color/colorLightPrimary"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_installment_number"
+        android:layout_marginTop="@dimen/default_margin_15">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_credit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_rate_of_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_rate_of_interest"
+        android:textColorHint="@color/colorLightPrimary"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_credit_amount"
+        android:layout_marginTop="@dimen/default_margin_15">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_rate_of_interest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_credit_calculate"
+        android:layout_width="@dimen/default_margin_150"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_30"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:background="@color/colorLightAccent"
+        android:text="@string/calculate"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_rate_of_interest" />
+
+    <Button
+        android:id="@+id/btn_credit_delete"
+        android:layout_width="@dimen/default_margin_150"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:layout_marginEnd="@dimen/default_margin_30"
+        android:background="@color/colorLightAccent"
+        android:text="@string/delete"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_rate_of_interest" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="277dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_fees_calculate" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_second"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_margin_50"
+        android:layout_marginTop="@dimen/default_margin_5"
+        app:layout_constraintTop_toBottomOf="@id/gl">
+
+        <TextView
+            android:id="@+id/tv_installment_amount"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_50"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:gravity="center_vertical"
+            android:text="@string/label_installment_amount"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_installment_amount_"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginStart="@dimen/default_margin_15"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:background="@drawable/textview_border"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_installment_amount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_third"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_margin_50"
+        android:layout_marginTop="@dimen/default_margin_5"
+        app:layout_constraintTop_toBottomOf="@id/cl_second">
+
+        <TextView
+            android:id="@+id/tv_total_credit_payback"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_50"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:gravity="center_vertical"
+            android:text="@string/label_total_credit_payment"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_total_credit_payback_amount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginStart="@dimen/default_margin_15"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:background="@drawable/textview_border"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_total_credit_payback"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

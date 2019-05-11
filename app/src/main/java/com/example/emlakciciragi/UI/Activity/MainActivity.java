@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.emlakciciragi.R;
-import com.example.emlakciciragi.UI.Fragment.FirstFragment;
-import com.example.emlakciciragi.UI.Fragment.SecondFragment;
-import com.example.emlakciciragi.UI.Fragment.ThirdFragment;
+import com.example.emlakciciragi.UI.Fragment.CommisionOnSaleFragment;
+import com.example.emlakciciragi.UI.Fragment.CommissionOnRentFragment;
+import com.example.emlakciciragi.UI.Fragment.LoanCalculatorFragment;
+import com.example.emlakciciragi.UI.Fragment.TitleDeedFeesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -49,8 +49,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     //region INITIALIZATION METHODS
 
     public void initiliazeViews() {
-        loadFragment(new FirstFragment());
-        setPageTitle(getString(R.string.first_fragment));
+        loadFragment(new CommisionOnSaleFragment());
+        setPageTitle(getString(R.string.commission_on_sale));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -92,19 +92,24 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()) {
-            case R.id.action_first_fragment:
-                setPageTitle(getString(R.string.first_fragment));
-                fragment = new FirstFragment();
+            case R.id.action_commission_on_sale:
+                setPageTitle(getString(R.string.commission_on_rent));
+                fragment = new CommisionOnSaleFragment();
                 loadFragment(fragment);
                 return true;
-            case R.id.action_second_fragment:
-                setPageTitle(getString(R.string.second_fragment));
-                fragment = new SecondFragment();
+            case R.id.action__commission_on_rent:
+                setPageTitle(getString(R.string.commission_on_rent));
+                fragment = new CommissionOnRentFragment();
                 loadFragment(fragment);
                 return true;
-            case R.id.action_third_fragment:
-                setPageTitle(getString(R.string.third_fragment));
-                fragment = new ThirdFragment();
+            case R.id.action_title_deed_fees:
+                setPageTitle(getString(R.string.title_deed_fees));
+                fragment = new TitleDeedFeesFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.action_loan_calculator:
+                setPageTitle(getString(R.string.loan_calculator));
+                fragment = new LoanCalculatorFragment();
                 loadFragment(fragment);
                 return true;
             default:

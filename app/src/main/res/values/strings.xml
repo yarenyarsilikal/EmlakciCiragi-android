@@ -2,14 +2,43 @@
     <string name="app_name">Emlakçı Çırağı</string>
 
     <!-- Settings -->
-    <string name="title_settings">Settings</string>
+    <string name="title_settings">Ayarlar</string>
+    <string name="commission_on_sale_rate">Satış Komisyonu Oranı</string>
+    <string name="commission_on_rent_rate">Kira Komisyonu Oranı</string>
+    <string name="title_deed_fees_rate">Tapu Harcı Oranı</string>
 
-    <!-- Bottom Navigation -->
-    <string name="first_fragment">First Fragment</string>
-    <string name="second_fragment">Second Fragment</string>
-    <string name="third_fragment">Third Fragment</string>
+    <!-- COMMISSION ON SALE  -->
+    <string name="commission_on_sale">Satış Komisyonu</string>
+    <string name="enter_sale_value">Lütfen satış değerini giriniz...</string>
+    <string name="label_customer_payment">Alıcının Ödeyeceği Tutar</string>
+    <string name="label_seller_payment">Satıcının Ödeyeceği Tutar </string>
+    <string name="label_total_payment">Toplam Komisyon</string>
 
-    <string name="value">Value</string>
-    <string name="enter_value">Please enter a value</string>
+    <!-- COMMISSION ON RENT -->
+    <string name="commission_on_rent">Kira Komisyonu</string>
+    <string name="enter_rent_value">Lütfen kira değerini giriniz...</string>
+    <string name="label_renter_payment">Kiracının Ödeyeceği Tutar</string>
+
+    <!-- TITLE DEED FEES -->
+    <string name="title_deed_fees">Tapu Harcı</string>
+    <string name="enter_current_price">Lütfen rayiç bedelini giriniz...</string>
+    <string name="label_customer_fees">Alıcının Ödeyeceği Tapu Harcı</string>
+    <string name="label_seller_fees">Satıcının Ödeyeceği Tapu Harcı</string>
+    <string name="label_total_fees">Toplam Tapu Harcı</string>
+
+    <!-- LOAN CALCULATOR -->
+    <string name="loan_calculator">Kredi Hesaplama</string>
+    <string name="enter_installment_number">Lütfen taksit sayısını giriniz...</string>
+    <string name="enter_credit_amount">Lütfen kredi miktarını giriniz...</string>
+    <string name="enter_rate_of_interest">Lütfen faiz oranını giriniz...</string>
+    <string name="label_installment_amount">Aylık Taksit Tutarı</string>
+    <string name="label_total_credit_payment">Toplam Ödeme</string>
+
+
+    <!-- COMMON -->
+    <string name="calculate">Hesapla</string>
+    <string name="delete">Temizle</string>
+    <string name="label_without_KDV">KDV Hariç</string>
+    <string name="label_include_KDV">KDV Dahil</string>
 
 </resources>
