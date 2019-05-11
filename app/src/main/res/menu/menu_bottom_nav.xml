@@ -3,28 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_first_fragment"
+        android:id="@+id/action_commission_on_sale"
         android:icon="@drawable/menu_first_fragment_icon"
+        android:iconTint="@color/colorAccent"
         android:orderInCategory="101"
-        android:title="@string/first_fragment"
-        app:showAsAction="ifRoom|withText"
-        android:iconTint="@color/colorAccent"/>
+        android:title="@string/commission_on_sale"
+        app:showAsAction="ifRoom|withText" />
 
     <item
-        android:id="@+id/action_second_fragment"
+        android:id="@+id/action__commission_on_rent"
         android:icon="@drawable/menu_second_fragment_icon"
+        android:iconTint="@color/colorAccent"
         android:orderInCategory="102"
-        android:title="@string/second_fragment"
-        app:showAsAction="ifRoom|withText"
-        android:iconTint="@color/colorAccent"/>
+        android:title="@string/commission_on_rent"
+        app:showAsAction="ifRoom|withText" />
 
 
     <item
-        android:id="@+id/action_third_fragment"
+        android:id="@+id/action_title_deed_fees"
         android:icon="@drawable/menu_third_fragment_icon"
+        android:iconTint="@color/colorAccent"
         android:orderInCategory="103"
-        android:title="@string/third_fragment"
-        app:showAsAction="ifRoom|withText"
-        android:iconTint="@color/colorAccent"/>
+        android:title="@string/title_deed_fees"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/action_loan_calculator"
+        android:icon="@drawable/menu_third_fragment_icon"
+        android:iconTint="@color/colorAccent"
+        android:orderInCategory="103"
+        android:title="@string/loan_calculator"
+        app:showAsAction="ifRoom|withText" />
 
 </menu>

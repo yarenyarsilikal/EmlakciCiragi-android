@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_margin_15"
+    tools:context=".UI.Fragment.CommissionOnRentFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_rent_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_rent_value"
+        android:textColorHint="@color/colorLightPrimary"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_sale_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_rent_calculate"
+        android:layout_width="@dimen/default_margin_150"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_30"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:background="@color/colorLightAccent"
+        android:text="@string/calculate"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_rent_value" />
+
+    <Button
+        android:id="@+id/btn_rent_delete"
+        android:layout_width="@dimen/default_margin_150"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:layout_marginEnd="@dimen/default_margin_30"
+        android:background="@color/colorLightAccent"
+        android:text="@string/delete"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/il_rent_value" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_rent_calculate" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_first"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_margin_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl">
+
+        <TextView
+            android:id="@+id/tv_without_KDV"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:gravity="center"
+            android:text="@string/label_without_KDV"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@id/tv_include_KDV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_include_KDV"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:gravity="center"
+            android:text="@string/label_include_KDV"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_second"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_margin_50"
+        android:layout_marginTop="@dimen/default_margin_5"
+        app:layout_constraintTop_toBottomOf="@id/cl_first">
+
+        <TextView
+            android:id="@+id/tv_customer_payment"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_50"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:gravity="center_vertical"
+            android:text="@string/label_renter_payment"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cp_without_KDV"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:background="@drawable/textview_border"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@id/tv_cp_include_KDV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cp_include_KDV"
+            android:layout_width="@dimen/default_margin_100"
+            android:layout_height="@dimen/default_margin_40"
+            android:layout_marginTop="@dimen/default_margin_5"
+            android:layout_marginEnd="@dimen/default_margin_30"
+            android:layout_marginBottom="@dimen/default_margin_5"
+            android:background="@drawable/textview_border"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
