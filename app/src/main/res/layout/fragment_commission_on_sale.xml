@@ -22,6 +22,7 @@
         android:id="@+id/il_sale_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
         android:hint="@string/enter_sale_value"
         android:textColorHint="@color/colorLightPrimary"
         app:boxBackgroundColor="@color/colorPrimaryDark"
@@ -33,32 +34,32 @@
             android:id="@+id/et_sale_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:lines="1"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_sale_calculate"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin_30"
         android:layout_marginTop="@dimen/default_margin_15"
         android:background="@color/colorLightAccent"
         android:text="@string/calculate"
         android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@id/btn_sale_delete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/il_sale_value" />
 
     <Button
         android:id="@+id/btn_sale_delete"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin_15"
-        android:layout_marginEnd="@dimen/default_margin_30"
         android:background="@color/colorLightAccent"
         android:text="@string/delete"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_sale_calculate"
         app:layout_constraintTop_toBottomOf="@id/il_sale_value" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -97,7 +98,6 @@
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:gravity="center"
             android:text="@string/label_include_KDV"
@@ -134,7 +134,7 @@
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@id/tv_cp_include_KDV"
             app:layout_constraintTop_toTopOf="parent" />
@@ -144,10 +144,9 @@
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -165,12 +164,9 @@
             android:id="@+id/tv_seller_payment"
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_50"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:gravity="center_vertical"
             android:text="@string/label_seller_payment"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/tv_sp_without_KDV"
@@ -180,7 +176,7 @@
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@id/tv_sp_include_KDV"
             app:layout_constraintTop_toTopOf="parent" />
@@ -190,10 +186,9 @@
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -226,7 +221,7 @@
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@id/tv_tp_include_KDV"
             app:layout_constraintTop_toTopOf="parent" />
@@ -236,10 +231,9 @@
             android:layout_width="@dimen/default_margin_100"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginTop="@dimen/default_margin_5"
-            android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

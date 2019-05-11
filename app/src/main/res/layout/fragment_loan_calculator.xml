@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/default_margin_15"
     tools:context=".UI.Fragment.LoanCalculatorFragment">
 
@@ -11,6 +11,7 @@
         android:id="@+id/il_installment_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
         android:hint="@string/enter_installment_number"
         android:textColorHint="@color/colorLightPrimary"
         app:boxBackgroundColor="@color/colorPrimaryDark"
@@ -22,53 +23,55 @@
             android:id="@+id/et_installment_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:lines="1"
-            android:inputType="number" />
+            android:inputType="number"
+            android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/il_credit_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:focusableInTouchMode="true"
         android:hint="@string/enter_credit_amount"
         android:textColorHint="@color/colorLightPrimary"
         app:boxBackgroundColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/il_installment_number"
-        android:layout_marginTop="@dimen/default_margin_15">
+        app:layout_constraintTop_toBottomOf="@id/il_installment_number">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_credit_amount"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:lines="1"
-            android:inputType="number" />
+            android:inputType="number"
+            android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/il_rate_of_interest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_15"
+        android:focusableInTouchMode="true"
         android:hint="@string/enter_rate_of_interest"
         android:textColorHint="@color/colorLightPrimary"
         app:boxBackgroundColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/il_credit_amount"
-        android:layout_marginTop="@dimen/default_margin_15">
+        app:layout_constraintTop_toBottomOf="@id/il_credit_amount">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_rate_of_interest"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:lines="1"
-            android:inputType="number" />
+            android:inputType="numberDecimal"
+            android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_credit_calculate"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_margin_30"
         android:layout_marginTop="@dimen/default_margin_15"
@@ -76,17 +79,19 @@
         android:text="@string/calculate"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_credit_delete"
         app:layout_constraintTop_toBottomOf="@id/il_rate_of_interest" />
 
     <Button
         android:id="@+id/btn_credit_delete"
-        android:layout_width="@dimen/default_margin_150"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin_15"
         android:layout_marginEnd="@dimen/default_margin_30"
         android:background="@color/colorLightAccent"
         android:text="@string/delete"
         android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@id/btn_credit_calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/il_rate_of_interest" />
 
@@ -120,7 +125,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_installment_amount_"
+            android:id="@+id/tv_installment_value"
             android:layout_width="0dp"
             android:layout_height="@dimen/default_margin_40"
             android:layout_marginStart="@dimen/default_margin_15"

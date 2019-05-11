@@ -4,26 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Activity.SettingsActivity"
-    android:padding="@dimen/default_margin_15">
-<!--
+    android:padding="@dimen/default_margin_15"
+    tools:context=".UI.Activity.SettingsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_settings"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
--->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_first"
         android:layout_width="match_parent"
         android:layout_height="@dimen/default_margin_50"
         android:layout_marginTop="@dimen/default_margin_15"
+        android:focusableInTouchMode="true"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -46,15 +35,16 @@
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:gravity="center"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_rate_of_sale"
-            app:layout_constraintTop_toTopOf="parent"
-            android:inputType="number"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_second"
         android:layout_width="match_parent"
@@ -81,16 +71,19 @@
             android:layout_marginTop="@dimen/default_margin_5"
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
+
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_rate_of_rent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:inputType="number"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_third"
         android:layout_width="match_parent"
@@ -118,11 +111,12 @@
             android:layout_marginEnd="@dimen/default_margin_30"
             android:layout_marginBottom="@dimen/default_margin_5"
             android:background="@drawable/textview_border"
-            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_deed_fees_rate"
-            app:layout_constraintTop_toTopOf="parent"
-            android:inputType="number"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
